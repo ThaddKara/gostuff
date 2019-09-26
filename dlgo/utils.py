@@ -1,4 +1,6 @@
 from dlgo import gotypes
+
+
 COLS = 'ABCDEFGHJKLMNOPQRST'
 STONE_TO_CHAR = {
     None: ' . ',
