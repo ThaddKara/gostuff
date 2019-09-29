@@ -67,7 +67,7 @@ class Board:
         adjacent_same_color = []
         adjacent_opposite_color = []
         liberties = []
-        for neighbor in point.neighbor():
+        for neighbor in point.neighbors():
             if not self.is_on_grid(neighbor):
                 continue
             neighbor_string = self._grid.get(neighbor)
