@@ -1,6 +1,6 @@
 from __future__ import print_function
 # tag::play_against_your_bot[]
-from dlgo.agent import naive
+from dlgo import agent
 from dlgo import goboard_slow as goboard
 from dlgo import gotypes
 from dlgo.utils import print_board, print_move, point_from_coords
@@ -10,7 +10,7 @@ from six.moves import input
 def main():
     board_size = 9
     game = goboard.GameState.new_game(board_size)
-    bot = naive.RandomBot()
+    bot = agent.RandomBot()
 
     while not game.is_over():
         print(chr(27) + "[2J")
