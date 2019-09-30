@@ -5,6 +5,7 @@ from dlgo import goboard_slow as goboard
 from dlgo import gotypes
 from dlgo.utils import print_board, print_move, point_from_coords
 from six.moves import input
+from dlgo import scoring
 
 
 def main():
@@ -23,8 +24,7 @@ def main():
             move = bot.select_move(game)
         print_move(game.next_player, move)
         game = game.apply_move(move)
-
-
+    print(scoring.compute_game_result(game))
 if __name__ == '__main__':
     main()
 # end::play_against_your_bot[]
