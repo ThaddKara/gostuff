@@ -8,7 +8,14 @@ import time
 
 
 def main():
-    board_size = 9
+    while True:
+        print("The board size(5-19)")
+        board_size = int(input())
+        if board_size<=19 and board_size>=5:
+            break
+        else:
+            print("Wrong size,please input 5-19")
+            
     game = goboard_slow.GameState.new_game(board_size)
     bots = {
         gotypes.Player.black: naive.RandomBot(),
