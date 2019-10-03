@@ -6,6 +6,8 @@ __all__ = [
     'Player',
     'Point'
 ]
+
+
 class Point(namedtuple('Point', 'row col')):
     def neighbors(self):
         return [
@@ -14,6 +16,7 @@ class Point(namedtuple('Point', 'row col')):
             Point(self.row, self.col - 1),
             Point(self.row, self.col + 1),
         ]
+
 
 class Player(enum.Enum):
     black = 1

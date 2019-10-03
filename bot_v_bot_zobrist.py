@@ -1,5 +1,5 @@
 from dlgo.agent import naive
-from dlgo import goboard_slow
+from dlgo import goboard
 from dlgo import gotypes
 from dlgo import scoring
 from dlgo.utils import print_board, print_move
@@ -15,7 +15,7 @@ def main():
             break
         else:
             print("Wrong size,please input 5-19")
-    game = goboard_slow.GameState.new_game(board_size)
+    game = goboard.GameState.new_game(board_size)
     bots = {
         gotypes.Player.black: naive.RandomBot(),
         gotypes.Player.white: naive.RandomBot(),
